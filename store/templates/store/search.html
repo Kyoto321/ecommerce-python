@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Search
+{% endblock %}
+
+
+{% block content %}
+
+<h2 class="text-2xl">Search</h2>
+
+<h3 class="text-xs text-gray-600">Search results for "{{ query }}":</h3>
+
+{% if products %}
+
+{% include 'store/partials/product.html' %}
+
+</div>
+{% else %}
+<p> There are no products matching this search</p>
+{% endif %}
+{% endblock %}
